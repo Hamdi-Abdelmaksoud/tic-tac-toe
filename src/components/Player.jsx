@@ -12,7 +12,8 @@ export default function Player({initName, symbol}){
     setPlayerName(event.target.value);
   }
   let editablePlayerName =<span className="palyer-name">{playerName}</span>
-  if (isEditing === true) {
+  //show input text when button is clicked
+  if (isEditing) {
 editablePlayerName=<input type="text" required value={playerName} onChange={handleChange}/>;
   }
   return(
